@@ -23,7 +23,7 @@
     "dependencies": {
         "angular": "1.5.5",
         "bootstrap": "3.3.6",
-        "btable": "0.0.1",
+        "btable": "0.0.2",
         "chance": "1.0.2",
         "fontawesome": "4.6.1",
         "jquery": "2.2.3"
@@ -36,6 +36,12 @@
                 "less/bootstrap.less"
             ]
         },
+        "btable": {
+         "main": [
+           "dist/btable.js",
+           "dist/btable.css"
+         ]
+       },
         "fontawesome": {
             "main": [
                 "css/font-awesome.css",
