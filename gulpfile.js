@@ -92,7 +92,9 @@ gulp.task('vendor-styles', function() {
 //     .pipe(gulp.dest(config.build + 'vendor/fonts/'));
 // });
 
-gulp.task('wiredev', ['vendor-fonts', 'vendor-scripts', 'vendor-styles', 'scripts', 'styles'],
+gulp.task('wiredev', ['vendor-fonts', 'vendor-scripts',
+      'vendor-styles', 'scripts', 'styles'
+   ],
    function() {
       return gulp.src(config.index)
          .pipe(wiredep.stream({
@@ -100,55 +102,23 @@ gulp.task('wiredev', ['vendor-fonts', 'vendor-scripts', 'vendor-styles', 'script
               html: {
                 replace: {
                   js: function(filePath) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    return '<script src="' + 'dist/vendor/scripts/' + filePath.split('/')
-                       .pop() + '"></script>';
+                    return '<script src="' + 'dist/vendor/scripts/' +
+                       filePath.split('/').pop() + '"></script>';
                   },
                   css: function(filePath) {
-                    return '<link rel="stylesheet" href="' + 'dist/vendor/styles/' +
-=======
-                    return '<script src="' + 'vendor/scripts/' + filePath.split('/')
-                       .pop() + '"></script>';
-                  },
-                  css: function(filePath) {
-                    return '<link rel="stylesheet" href="' + 'vendor/styles/' +
->>>>>>> refs/remotes/origin/master
-=======
-                    return '<script src="' + 'dist/vendor/scripts/' + filePath.split('/')
-                       .pop() + '"></script>';
-                  },
-                  css: function(filePath) {
-                    return '<link rel="stylesheet" href="' + 'dist/vendor/styles/' +
->>>>>>> refs/remotes/origin/master
-                       filePath.split('/')
-                       .pop() + '"/>';
+                    return '<link rel="stylesheet" href="' +
+                       'dist/vendor/styles/' +
+                       filePath.split('/').pop() + '"/>';
                   }
                 }
               }
             }
           }))
-<<<<<<< HEAD
-<<<<<<< HEAD
          .pipe(gulp.dest('./'));
     });
 
 gulp.task('index', ['wiredev'], function() {
   var target = gulp.src('index.html');
-=======
-         .pipe(gulp.dest(config.build));
-    });
-
-gulp.task('index', ['wiredev'], function() {
-  var target = gulp.src(config.build + '/**/*.html');
->>>>>>> refs/remotes/origin/master
-=======
-         .pipe(gulp.dest('./'));
-    });
-
-gulp.task('index', ['wiredev'], function() {
-  var target = gulp.src('index.html');
->>>>>>> refs/remotes/origin/master
 
   var appSteram = gulp.src([config.build + 'scripts/**/*.js'], {
     read: false
@@ -160,15 +130,7 @@ gulp.task('index', ['wiredev'], function() {
   return target.pipe(inject(series(appSteram, cssStream), {
         relative: true
       }))
-<<<<<<< HEAD
-<<<<<<< HEAD
      .pipe(gulp.dest('./'))
-=======
-     .pipe(gulp.dest(config.build))
->>>>>>> refs/remotes/origin/master
-=======
-     .pipe(gulp.dest('./'))
->>>>>>> refs/remotes/origin/master
      .pipe(livereload());
 });
 
