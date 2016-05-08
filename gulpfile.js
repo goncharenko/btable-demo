@@ -126,7 +126,7 @@ gulp.task('index', ['wiredev'], function() {
   });
 
   return target.pipe(inject(series(appSteram, cssStream), {
-        relative: false
+        relative: true
       }))
      .pipe(gulp.dest('./'))
      .pipe(livereload());
