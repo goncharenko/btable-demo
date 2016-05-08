@@ -24,9 +24,13 @@
         "angular": "1.5.5",
         "bootstrap": "3.3.6",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "btable": "0.0.2",
 =======
         "btable": "0.0.1",
+>>>>>>> refs/remotes/origin/master
+=======
+        "btable": "0.0.2",
 >>>>>>> refs/remotes/origin/master
         "chance": "1.0.2",
         "fontawesome": "4.6.1",
@@ -41,6 +45,7 @@
             ]
         },
 <<<<<<< HEAD
+<<<<<<< HEAD
         "btable": {
           "main": [
             "dist/btable.js",
@@ -48,6 +53,14 @@
           ]
         },
 =======
+>>>>>>> refs/remotes/origin/master
+=======
+        "btable": {
+         "main": [
+           "dist/btable.js",
+           "dist/btable.css"
+         ]
+       },
 >>>>>>> refs/remotes/origin/master
         "fontawesome": {
             "main": [

@@ -101,6 +101,7 @@ gulp.task('wiredev', ['vendor-fonts', 'vendor-scripts', 'vendor-styles', 'script
                 replace: {
                   js: function(filePath) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     return '<script src="' + 'dist/vendor/scripts/' + filePath.split('/')
                        .pop() + '"></script>';
                   },
@@ -113,6 +114,13 @@ gulp.task('wiredev', ['vendor-fonts', 'vendor-scripts', 'vendor-styles', 'script
                   css: function(filePath) {
                     return '<link rel="stylesheet" href="' + 'vendor/styles/' +
 >>>>>>> refs/remotes/origin/master
+=======
+                    return '<script src="' + 'dist/vendor/scripts/' + filePath.split('/')
+                       .pop() + '"></script>';
+                  },
+                  css: function(filePath) {
+                    return '<link rel="stylesheet" href="' + 'dist/vendor/styles/' +
+>>>>>>> refs/remotes/origin/master
                        filePath.split('/')
                        .pop() + '"/>';
                   }
@@ -120,6 +128,7 @@ gulp.task('wiredev', ['vendor-fonts', 'vendor-scripts', 'vendor-styles', 'script
               }
             }
           }))
+<<<<<<< HEAD
 <<<<<<< HEAD
          .pipe(gulp.dest('./'));
     });
@@ -133,6 +142,13 @@ gulp.task('index', ['wiredev'], function() {
 gulp.task('index', ['wiredev'], function() {
   var target = gulp.src(config.build + '/**/*.html');
 >>>>>>> refs/remotes/origin/master
+=======
+         .pipe(gulp.dest('./'));
+    });
+
+gulp.task('index', ['wiredev'], function() {
+  var target = gulp.src('index.html');
+>>>>>>> refs/remotes/origin/master
 
   var appSteram = gulp.src([config.build + 'scripts/**/*.js'], {
     read: false
@@ -145,9 +161,13 @@ gulp.task('index', ['wiredev'], function() {
         relative: true
       }))
 <<<<<<< HEAD
+<<<<<<< HEAD
      .pipe(gulp.dest('./'))
 =======
      .pipe(gulp.dest(config.build))
+>>>>>>> refs/remotes/origin/master
+=======
+     .pipe(gulp.dest('./'))
 >>>>>>> refs/remotes/origin/master
      .pipe(livereload());
 });
