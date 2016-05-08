@@ -1,0 +1,49 @@
+{
+    "name": "btable_demo",
+    "version": "0.0.1",
+    "authors": [
+        "goncharenko"
+    ],
+    "description": "Demo site for bTable control",
+    "main": "dist/btable.js",
+    "keywords": [
+        "btable",
+        "bTable",
+        "b-table",
+        "table"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "angular": "1.5.5",
+        "bootstrap": "3.3.6",
+        "btable": "0.0.1",
+        "chance": "1.0.2",
+        "fontawesome": "4.6.1",
+        "jquery": "2.2.3"
+    },
+    "overrides": {
+        "bootstrap": {
+            "main": [
+                "dist/js/bootstrap.js",
+                "dist/css/bootstrap.min.css",
+                "less/bootstrap.less"
+            ]
+        },
+        "fontawesome": {
+            "main": [
+                "css/font-awesome.css",
+                "fonts/fontawesome-webfont.eot",
+                "fonts/fontawesome-webfont.woff",
+                "fonts/fontawesome-webfont.ttf",
+                "fonts/fontawesome-webfont.svg"
+            ]
+        }
+    }
+}
