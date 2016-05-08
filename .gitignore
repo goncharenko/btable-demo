@@ -2,3 +2,7 @@
 /npm-debug.log
 /component.json
 /bower_components
+<<<<<<< HEAD
+=======
+/dist
+>>>>>>> refs/remotes/origin/master
